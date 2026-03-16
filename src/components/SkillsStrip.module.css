@@ -1,0 +1,78 @@
+.section {
+  padding: 8rem 0;
+  background: #000;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.marqueeContainer {
+  width: 120vw; /* Wider to accommodate tilt without edges showing */
+  transform: rotate(-3deg);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 3rem 0;
+  background: rgba(255, 255, 255, 0.02);
+  user-select: none;
+  display: flex;
+  overflow: hidden;
+  margin-left: -10vw;
+}
+
+.marquee {
+  display: flex;
+  white-space: nowrap;
+  gap: 6rem;
+  padding-right: 6rem;
+}
+
+.skillItem {
+  display: flex;
+  align-items: center;
+  gap: 6rem;
+}
+
+.skillName {
+  font-family: var(--font-editorial);
+  font-size: clamp(3rem, 7vw, 6rem);
+  font-weight: 800;
+  text-transform: uppercase;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(255, 255, 255, 0.3);
+  letter-spacing: 0.05em;
+  transition: all 0.4s ease;
+}
+
+.skillItem:hover .skillName {
+  color: #fff;
+  -webkit-text-stroke: 1px #fff;
+  text-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+}
+
+.star {
+  color: #ff3333; /* Vibrant Red */
+  font-size: 3rem;
+  filter: drop-shadow(0 0 10px rgba(255, 51, 51, 0.5));
+  animation: pulse 2s infinite ease-in-out;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.2); opacity: 1; }
+}
+
+@media (max-width: 768px) {
+  .marqueeContainer {
+    width: 150vw;
+    margin-left: -25vw;
+    padding: 2rem 0;
+  }
+  .skillName {
+    font-size: 2.5rem;
+  }
+  .star {
+    font-size: 1.5rem;
+  }
+}

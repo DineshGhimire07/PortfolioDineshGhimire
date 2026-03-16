@@ -1,0 +1,73 @@
+.bloomContainer {
+  position: absolute;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.baseColor {
+  position: absolute;
+  inset: 0;
+  background-color: #000;
+  z-index: 1;
+}
+
+/* Deep warm copper cursor follow */
+.bloomCursor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60vw;
+  height: 60vw;
+  background: radial-gradient(circle, rgba(179, 139, 89, 0.08) 0%, transparent 60%);
+  border-radius: 50%;
+  filter: blur(120px);
+  z-index: 2;
+  will-change: transform;
+  mix-blend-mode: screen;
+}
+
+/* Static ambient lights for composition balance */
+.bloomStaticOne {
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 80vw;
+  height: 80vw;
+  background: radial-gradient(circle, rgba(250, 249, 246, 0.03) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(150px);
+  z-index: 2;
+}
+
+.bloomStaticTwo {
+  position: absolute;
+  bottom: -30%;
+  left: -20%;
+  width: 70vw;
+  height: 70vw;
+  background: radial-gradient(circle, rgba(179, 139, 89, 0.05) 0%, transparent 70%);
+  border-radius: 50%;
+  filter: blur(150px);
+  z-index: 2;
+}
+
+/* Vignette and extremely subtle, expensive grain */
+.textureVignette {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  box-shadow: inset 0 0 200px rgba(0, 0, 0, 0.9);
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+  opacity: 0.04;
+  mix-blend-mode: overlay;
+  animation: filmBreathe 8s ease-in-out infinite alternate;
+}
+
+@keyframes filmBreathe {
+  0% { opacity: 0.03; }
+  100% { opacity: 0.06; }
+}

@@ -1,0 +1,57 @@
+.button {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 2.5rem;
+  border-radius: 9999px;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 1rem;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.primary {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.primary:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+  background: #1a1a1a;
+}
+
+.secondary {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid transparent;
+}
+
+.secondary:hover {
+  color: var(--accent-primary);
+}
+
+.textWrapper {
+  position: relative;
+  z-index: 2;
+}
+
+.glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 150%;
+  height: 150%;
+  background: radial-gradient(circle, rgba(229, 57, 53, 0.15) 0%, transparent 60%);
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.primary:hover .glow {
+  opacity: 1;
+}
