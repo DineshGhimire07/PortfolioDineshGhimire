@@ -2,11 +2,11 @@
 
 Official personal website and digital identity hub of **Dinesh Ghimire** — a BBA Entrepreneurship student, digital builder, and data analyst.
 
-## 🚀 Overview
+## Overview
 
 This website serves as a high-end, editorial-style showcase of projects at the intersection of **business thinking**, **data analytics**, and **digital execution**. It is designed with a focus on modern aesthetics, premium motion design, and strong SEO identity signals.
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 - **Framework**: React 19 + Vite 8
 - **Motion**: Framer Motion & GSAP (ScrollTrigger)
@@ -14,14 +14,14 @@ This website serves as a high-end, editorial-style showcase of projects at the i
 - **Icons**: Lucide React & React Icons
 - **SEO**: Custom dynamic meta-management with JSON-LD Schema.org integration.
 
-## 📁 Key Features
+## Key Features
 
 - **Personal Brand Identity**: Custom hero with layered typography contrast.
 - **Dynamic Projects Showcase**: Interactive carousel with GSAP-driven infinite loop.
 - **Identity Hub**: Fully integrated "About Me" and "Connect" sections with verified social links.
 - **SEO Optimized**: Optimized for name-based search and AI-crawling as the official hub for "Dinesh Ghimire".
 
-## 💻 Local Development
+## Local Development
 
 To run the project locally, follow these steps:
 
